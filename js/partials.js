@@ -16,7 +16,7 @@ const header=`
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link" >Home</a>
                     <a href="about.html" class="nav-item nav-link">Cosa facciamo</a>
-                    <a href="404.html" class="nav-item nav-link">Chi siamo</a>                    
+                    <a href="team.html" class="nav-item nav-link">Chi siamo</a>                    
                     <a href="testimonianze.html" class="nav-item nav-link">Testimonianze</a>                    
                     <a href="contact.html" class="nav-item nav-link">Contattaci</a>
                     <a href="donation.html" class="nav-item nav-link mobileonly">Effettua una donazione</a>
