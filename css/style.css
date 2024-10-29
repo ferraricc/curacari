@@ -365,6 +365,14 @@ h6,
 
 
 /*** Team ***/
+#teamrow{
+    display: flex;
+    justify-content: center;
+}
+#teamrow .col-lg-4{
+    margin-right: 25px;
+    margin-left: 25px;
+}
 .team-item .team-text {
     position: absolute;
     width: 250px;
@@ -379,8 +387,12 @@ h6,
     border: 17px solid var(--light);
     border-radius: 250px;
     transition: .5s;
+    
 }
-
+.team-item img{
+    max-height: 100%;
+    object-fit: cover;
+}
 .team-item:hover .team-text {
     border-color: var(--primary);
 }
@@ -554,4 +566,42 @@ a.active{
     color: #3d386c;
     letter-spacing: 1px;
     box-shadow: none;
+}
+.projectscontainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.projectcard{
+    background-color: #fff5f3;
+    margin: 20px;
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+
+}
+.projectcard h4{
+    color: #103741;
+    
+}
+.projectcard h4:hover{
+    color: #54b9cd;
+}
+.projectcard img{
+    width: 325px;
+    height: 325px;
+    border-radius: 5px;
+}
+
+.projectcard h4, .projectcard p{
+    padding: 25px 15px 15px 15px;
 }
