@@ -590,6 +590,11 @@ a.active{
 }
 .projectcard h4:hover{
     color: #54b9cd;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .projectcard img{
     width: 325px;
