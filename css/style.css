@@ -195,19 +195,20 @@ h6,
 
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
-        position: relative;
-    height: 100vh; /* or 600px for a smaller version */
+    position: relative;
+    height: 100vh; /* or use 600px if preferred */
+    overflow: hidden;
 }
 
     }
     
     .header-carousel .owl-carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     }
 
     .header-carousel .owl-carousel-item p {
