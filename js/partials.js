@@ -33,16 +33,17 @@ const footer=`
                         <h3 class="text-white mb-4">Come puoi contattarci</h3>                        
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+39 353 4618282</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>curacari@gmail.com</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Via Cappella 99, 41053 Gorzano, Italia</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social " href="https://www.instagram.com/curacari?utm_source=webiste"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social " href="https://www.facebook.com/curacari"><i class="fab fa-facebook-f"></i></a>                            
+                            <a class="btn btn-outline-light btn-social " href="https://www.facebook.com/profile.php?id=61561046382803"><i class="fab fa-facebook-f"></i></a>                            
                             <a class="btn btn-outline-light btn-social " href="https://www.linkedin.com/company/curacariaps"><i class="fab fa-linkedin-in"></i></a>
                             <a class="btn btn-outline-light btn-social " href="https://www.youtube.com/@CuracariAPS"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Collegamenti rapidi</h3>
-                        <a class="btn btn-link  " href="404.html">Chi Siamo</a>
+                        <a class="btn btn-link  " href="team.html">Chi Siamo</a>
                         <a class="btn btn-link  " href="about.html">Cosa facciamo</a>
                         <a class="btn btn-link  " href="testimonianze.html">Testimonianze</a>
                         <a class="btn btn-link  " href="donation.html">Donazioni</a>
