@@ -151,14 +151,10 @@ h6,
         opacity: 0;
         visibility: hidden;
         transition: .5s;
-        mobileonly{
-        display:none;
     }
     
-        
-    }
-    .mobileonly{
-        display:none;
+    .mobileonly {
+        display: none;
     }
 
     .navbar .nav-item:hover .dropdown-menu {
@@ -365,11 +361,11 @@ h6,
 
 
 /*** Team ***/
-#teamrow{
+#teamrow {
     display: flex;
     justify-content: center;
 }
-#teamrow .col-lg-4{
+#teamrow .col-lg-4 {
     margin-right: 25px;
     margin-left: 25px;
 }
@@ -387,9 +383,8 @@ h6,
     border: 17px solid var(--light);
     border-radius: 250px;
     transition: .5s;
-    
 }
-.team-item img{
+.team-item img {
     max-height: 100%;
     object-fit: cover;
 }
@@ -487,8 +482,6 @@ h6,
     margin-right: 10px;
 }
 
-
-
 .footer .form-control {
     border-color: rgba(255,255,255,0.5);
 }
@@ -521,52 +514,46 @@ h6,
     border-right: none;
 }
 
-a.active{
-    color:#54b9cd;
+a.active {
+    color: #54b9cd;
 }
-.breadcrumb-item a{color:#54b9cd;}
+.breadcrumb-item a { color: #54b9cd; }
 
-.btn-redbtn{
+.btn-redbtn {
     background-color: rgb(196,52,58);
     border-color: rgb(196,52,58);
 }
-.btn-redbtn:hover{
+.btn-redbtn:hover {
     background-color: rgb(249,68,68);
     border-color: rgb(249,68,68);
-    
 }
-.btn-greenbtn{
+.btn-greenbtn {
     background-color: rgb(114,181,67);
     border-color: rgb(114,181,67);
 }
-.btn-greenbtn:hover{
+.btn-greenbtn:hover {
     background-color: rgb(136,253,151);
     border-color: rgb(136,253,151);
-    
 }
-.btn-bluebtn{
+.btn-bluebtn {
     background-color: #54b9cd;
     border-color: #54b9cd;
 }
-.btn-bluebtn:hover{
+.btn-bluebtn:hover {
     background-color: #3d386c;
     border-color: #3d386c;
-    
 }
-.w-90{
-    width: 92%;
-}
-.h-90{
-    height: 92%;
-}
-.darkblue{
-    color: #3d386c;
-}
+.w-90 { width: 92%; }
+.h-90 { height: 92%; }
+.darkblue { color: #3d386c; }
+
 .footer .btn.btn-link:hover {
     color: #3d386c;
     letter-spacing: 1px;
     box-shadow: none;
 }
+
+/*** Projects ***/
 .projectscontainer {
     display: flex;
     flex-wrap: wrap;
@@ -574,7 +561,7 @@ a.active{
     justify-content: center;
 }
 .projectcard {
-    flex: 1 1 300px; /* allows resizing based on content */
+    flex: 1 1 300px;
     padding: 20px;
     border-radius: 15px;
     background-color: #f8f9fa;
@@ -583,21 +570,39 @@ a.active{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    cursor: pointer;
 }
-.projectcard h4{
+.projectcard:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+.projectcard h4 {
     color: #103741;
-    
 }
-.projectcard h4:hover{
+.projectcard h4:hover {
     color: #54b9cd;
-
 }
-.projectcard img{
+.projectcard img {
     width: 325px;
     height: 325px;
     border-radius: 5px;
+    object-fit: cover;
+}
+.projectcard h4, .projectcard p {
+    padding: 25px 15px 15px 15px;
 }
 
-.projectcard h4, .projectcard p{
-    padding: 25px 15px 15px 15px;
+/*** Press Cards ***/
+.press-card {
+    transition: all 0.3s ease;
+    border: 1px solid #eee !important;
+}
+.press-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+    transform: translateY(-3px);
+    border-color: #54b9cd !important;
+}
+.press-card h5 {
+    font-size: 1rem;
+    line-height: 1.4;
 }
