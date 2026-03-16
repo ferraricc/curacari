@@ -6,16 +6,14 @@ const header=`
         </div>        
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand">
-                <!-- <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3">Kider</i></h1> -->
-                    <h1 class="m-0 text-primary"><img src="img/curacari_logo.png" style="min-height: 25px; max-height: 35px; position: relative; bottom: 5px;" alt=""></h1>
+                    <h1 class="m-0 text-primary"><img src="img/curacari_logo.png" style="min-height: 25px; max-height: 35px; position: relative; bottom: 5px;" alt="Curacari"></h1>
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link" >Home</a>
-                    
+                    <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="team.html" class="nav-item nav-link">Chi siamo</a>                    
                     <a href="testimonianze.html" class="nav-item nav-link">Progetti</a>                    
                     <a href="contact.html" class="nav-item nav-link">Contattaci</a>
@@ -35,36 +33,40 @@ const footer=`
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>curacari@gmail.com</p>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Via Cappella 99, 41053 Gorzano, Italia</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social " href="https://www.instagram.com/curacari?utm_source=webiste"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social " href="https://www.facebook.com/profile.php?id=61561046382803"><i class="fab fa-facebook-f"></i></a>                            
-                            <a class="btn btn-outline-light btn-social " href="https://www.linkedin.com/company/curacariaps"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-social " href="https://www.youtube.com/@CuracariAPS"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/curacari?utm_source=webiste"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61561046382803"><i class="fab fa-facebook-f"></i></a>                            
+                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/curacariaps"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CuracariAPS"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Collegamenti rapidi</h3>
-                        <a class="btn btn-link  " href="team.html">Chi Siamo</a>
-                        <a class="btn btn-link  " href="about.html">Cosa facciamo</a>
-                        <a class="btn btn-link  " href="testimonianze.html">Testimonianze</a>
-                        <a class="btn btn-link  " href="donation.html">Donazioni</a>
-                        <a class="btn btn-link  " href="contact.html">Contatti</a>
+                        <a class="btn btn-link" href="team.html">Chi Siamo</a>
+                        <a class="btn btn-link" href="about.html">Cosa facciamo</a>
+                        <a class="btn btn-link" href="testimonianze.html">Progetti</a>
+                        <a class="btn btn-link" href="donation.html">Donazioni</a>
+                        <a class="btn btn-link" href="contact.html">Contatti</a>
                     </div>
-                    
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Riconoscimenti</h3>
+                        <a class="btn btn-link" href="https://www.regione.emilia-romagna.it/caregiver/mappe/associazioni-caregiver/associazioni-modena/curacari-aps" target="_blank" rel="noopener">
+                            <i class="fa fa-award me-2"></i>Regione Emilia-Romagna
+                        </a>
+                        <p class="text-white-50 small mt-2">Curacari APS è riconosciuta dalla Regione Emilia-Romagna come associazione caregiver sul territorio di Modena.</p>
+                    </div>
                 </div>
             </div>
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Curacari.org</a>, All Right Reserved. 						
-							
-							Developed with &hearts; by Enrico Bergamini
+                            &copy; <a class="border-bottom" href="#">Curacari.org</a>, All Right Reserved.                      
+                            Developed with &hearts; by Enrico Bergamini
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
                                 <a href="index.html">Home</a>
                                 <a href="contact.html">Contatti</a>
-                                
                             </div>
                         </div>
                     </div>
@@ -88,6 +90,3 @@ setTimeout(()=>{
         }
     });
 },200);
-
-
-
