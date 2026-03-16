@@ -21,7 +21,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="caregiver, supporto, assistenti familiari, promozione sociale, formazione, Modena, Maranello, non autosufficienza" name="keywords">
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Curacari – Supporto e formazione per caregiver familiari">
     <meta property="og:description" content="Supportiamo caregiver familiari e assistenti offrendo formazione, supporto e accompagnamento alla rete dei servizi sociosanitari a Modena e Maranello.">
     <meta property="og:image" content="https://curacari.org/img/favicon.png">
@@ -29,29 +29,27 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
 
-    <!-- Twitter Meta Tags -->
+    <!-- Twitter -->
     <meta name="twitter:title" content="Curacari – Supporto e formazione per caregiver familiari">
     <meta name="twitter:description" content="Supportiamo caregiver familiari e assistenti offrendo formazione, supporto e accompagnamento alla rete dei servizi sociosanitari.">
     <meta name="twitter:image" content="https://curacari.org/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Web Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- Icon Font Stylesheet -->
+
+    <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
+    <!-- Libraries -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Bootstrap + Template -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Structured Data -->
@@ -80,183 +78,356 @@
       ]
     }
     </script>
+
+    <style>
+        /* Impact strip */
+        .impact-strip { background: #fff; border-bottom: 1px solid #eef0f2; }
+        .impact-item { padding: 28px 20px; text-align: center; border-right: 1px solid #eef0f2; }
+        .impact-item:last-child { border-right: none; }
+        .impact-num { font-family: 'Lobster Two', cursive; font-size: 2.4rem; color: #3d386c; line-height: 1; }
+        .impact-label { font-size: 0.82rem; color: #74787C; margin-top: 4px; }
+
+        /* Service cards */
+        .service-card {
+            background: #fff;
+            border: 2px solid #eef0f2;
+            border-radius: 20px;
+            padding: 32px 28px;
+            height: 100%;
+            transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+        }
+        .service-card:hover {
+            border-color: #54b9cd;
+            box-shadow: 0 10px 28px rgba(84,185,205,0.14);
+            transform: translateY(-4px);
+        }
+        .service-icon {
+            width: 56px; height: 56px;
+            border-radius: 14px;
+            background: #e3f6fb;
+            color: #54b9cd;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+        .service-card h3 { font-size: 1.1rem; color: #3d386c; margin-bottom: 10px; }
+        .service-card p  { font-size: 0.93rem; color: #74787C; margin: 0; }
+
+        /* Goals */
+        .goals-section { background: #FFF5F3; }
+        .goal-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; }
+        .goal-item:last-child { margin-bottom: 0; }
+        .goal-dot { flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%; background: #54b9cd; margin-top: 8px; }
+        .goal-item h4 { font-size: 1rem; color: #3d386c; margin-bottom: 4px; }
+        .goal-item p  { font-size: 0.9rem; color: #74787C; margin: 0; }
+
+        /* Donate banner */
+        .donate-banner {
+            background: linear-gradient(135deg, #3d386c 0%, #54b9cd 100%);
+            border-radius: 24px;
+            padding: 52px 48px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .donate-banner::before {
+            content: '♥';
+            position: absolute;
+            right: 48px; top: 50%;
+            transform: translateY(-50%);
+            font-size: 9rem;
+            opacity: 0.07;
+            line-height: 1;
+        }
+        .donate-banner h2 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+        .donate-banner p  { opacity: 0.9; font-size: 1.05rem; max-width: 520px; margin-bottom: 28px; }
+        .btn-donate-white {
+            background: #fff; color: #3d386c; border: none;
+            border-radius: 50px; padding: 14px 36px;
+            font-weight: 700; font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+            display: inline-flex; align-items: center; gap: 8px;
+            text-decoration: none;
+        }
+        .btn-donate-white:hover { background: #FFF5F3; color: #3d386c; transform: scale(1.03); }
+
+        /* Press strip */
+        .press-mini { border-top: 1px solid #eef0f2; padding: 14px 0; }
+        .press-mini-item {
+            display: inline-flex; align-items: center; gap: 8px;
+            margin-right: 32px; font-size: 0.85rem;
+            color: #74787C; text-decoration: none; transition: color 0.2s;
+        }
+        .press-mini-item:hover { color: #3d386c; }
+        .press-mini-item strong { color: #3d386c; }
+
+        @media (max-width: 767px) {
+            .impact-item { border-right: none; border-bottom: 1px solid #eef0f2; }
+            .impact-item:last-child { border-bottom: none; }
+            .donate-banner { padding: 36px 24px; }
+            .donate-banner::before { display: none; }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0" id="maincontainer">
+<div class="container-xxl bg-white p-0" id="maincontainer">
 
-        <!-- Hero Image -->
-        <div class="header-carousel position-relative">
-            <div class="position-relative">
-                <img class="img-fluid w-100" src="img/inaugurazione-2.jpeg" alt="Inaugurazione sede Curacari - associazione per caregiver familiari a Maranello">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-2 text-white animated slideInDown mb-4">Insieme ai caregiver, ogni giorno. Curacari è al tuo fianco con formazione e supporto concreto.</h1>
-                                <p class="fs-4 fw-medium text-white mb-4 pb-2">
-                                    Costruisci con noi un percorso basato sul sostegno a te, che sei un caregiver.
-                                    Chiama il
-                                    <a class="text-white px-sm-3" style="background-color: rgba(0,0,0,0.7); border-radius: 15px;">
-                                        <strong>353 461 8282</strong>
-                                    </a>
-                                </p>
-                                <a href="testimonianze.html" class="btn btn-primary btn-bluebtn rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Scopri i progetti</a>
+    <!-- HERO -->
+    <div class="header-carousel position-relative">
+        <div class="position-relative">
+            <img class="img-fluid w-100" src="img/inaugurazione-2.jpeg" alt="Inaugurazione sede Curacari - associazione per caregiver familiari a Maranello">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0,0,0,.25);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-11 col-lg-7">
+                            <h1 class="display-2 text-white animated slideInDown mb-3">Insieme ai caregiver, ogni giorno.</h1>
+                            <p class="fs-5 text-white mb-4 animated slideInDown" style="opacity:0.95; max-width:480px;">
+                                Curacari è al tuo fianco con formazione, ascolto e supporto concreto per chi si prende cura di una persona fragile.
+                            </p>
+                            <div class="d-flex flex-wrap gap-3 align-items-center animated slideInLeft">
+                                <a href="testimonianze.html" class="btn btn-primary btn-bluebtn rounded-pill py-3 px-5">Scopri i progetti</a>
+                                <a href="contact.html" class="btn btn-outline-light rounded-pill py-3 px-4">Contattaci</a>
                             </div>
+                            <p class="text-white mt-3 mb-0" style="font-size:0.9rem; opacity:0.85;">
+                                <i class="fa fa-phone me-2"></i>Chiama lo sportello: <strong>353 461 8282</strong>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
+    </div>
+    <!-- Hero End -->
 
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h2 class="mb-4 darkblue">Cosa facciamo</h2>
-                        <ul>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Sostegno Relazionale</h3>
-                                <p>Forniamo supporto relazionale per aiutare i caregiver a prendersi cura di sé stessi e affrontare le sfide del caregiving, con un approccio culturalmente sensibile e rispettoso delle diversità.</p>
-                            </li>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Accompagnamento alla Rete dei Servizi Sociosanitari</h3>
-                                <p>Orientiamo i caregiver nell'accesso ai servizi sociosanitari, offrendo supporto nelle pratiche burocratiche e facilitando l'accesso alle risorse esistenti sul territorio.</p>
-                            </li>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Partecipazione Attiva e Formazione</h3>
-                                <p>Forniamo sostegno formativo e tutoring ai caregiver e agli assistenti familiari. I nostri programmi formativi mirano a migliorare le competenze pratiche e relazionali dei caregiver, affinché possano affrontare con maggiore sicurezza le sfide legate alla cura delle persone non autosufficienti.</p>
-                            </li>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Partecipazione ai Gruppi AMA</h3>
-                                <p>Organizziamo gruppi di Auto Mutuo Aiuto (AMA) per persone che condividono esperienze difficili. Questi gruppi offrono uno spazio sicuro dove i partecipanti possono diventare una risorsa per sé stessi e per gli altri, condividendo esperienze e supporto.</p>
-                            </li>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Consulenza Legale su DAT e ADS</h3>
-                                <p>Forniamo orientamento su disposizioni anticipate di trattamento (DAT) e Amministrazione di Sostegno (ADS), per dare ai caregiver le risorse legali utili per tutelare i propri cari.</p>
-                            </li>
-                        </ul>
-
-                        <h2 class="mb-4 darkblue">I principali obiettivi formativi</h2>
-                        <ul>                            
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Cura Solidale</h3>
-                                <p>Promuoviamo una cura basata su ascolto, accoglienza, empatia, formazione e inclusione. Vogliamo contribuire all'umanizzazione delle cure, mettendo al centro l'importanza del supporto reciproco e della solidarietà tra i caregiver.</p>
-                            </li>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Empowerment</h3>
-                                <p>Formazione dei volontari dello sportello d'ascolto, dei caregiver familiari e degli assistenti familiari per promuovere l'empowerment tramite l'educazione socio-sanitaria.</p>
-                            </li>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Capacità e Potenzialità</h3>
-                                <p>Lavoriamo per aumentare le capacità, sviluppare le potenzialità e responsabilizzare i caregiver nel loro rapporto con la famiglia, affinché possano rispondere alle sfide della non autosufficienza.</p>
-                            </li>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Competenze Pratiche</h3>
-                                <p>I nostri percorsi formativi mirano a fornire conoscenze e abilità pratiche per organizzare e svolgere attività di cura.</p>
-                            </li>
-                            <li>
-                                <h3 class="darkblue" style="font-size:1.25rem;">Conoscenze Specifiche</h3>
-                                <p>Offriamo informazioni sulle problematiche fisiche, psicologiche, assistenziali e curative delle persone anziane, fragili o non autosufficienti.</p>
-                            </li>
-                        </ul>
-                        
-                    </div>
-                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/foto1.jpg" alt="Attività di Curacari con caregiver familiari">
-                            </div>
-                            <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/foto2.jpg" alt="Volontari Curacari in attività">
-                            </div>
-                            <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/resto-del-carlino.webp" alt="Curacari su Il Resto del Carlino">
-                            </div>
-                        </div>
-                    </div>
+    <!-- IMPACT STRIP -->
+    <div class="impact-strip wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-6 col-md-3 impact-item">
+                    <div class="impact-num">300+</div>
+                    <div class="impact-label">Caregiver supportati</div>
+                </div>
+                <div class="col-6 col-md-3 impact-item">
+                    <div class="impact-num">13+</div>
+                    <div class="impact-label">Progetti attivi nel 2025</div>
+                </div>
+                <div class="col-6 col-md-3 impact-item">
+                    <div class="impact-num">30h</div>
+                    <div class="impact-label">Corso gratuito realizzato</div>
+                </div>
+                <div class="col-6 col-md-3 impact-item">
+                    <div class="impact-num">100%</div>
+                    <div class="impact-label">Volontari, nessun profitto</div>
                 </div>
             </div>
         </div>
-        <!-- About End -->
+    </div>
+    <!-- Impact Strip End -->
 
-        <div class="container-xxl py-5 flex-row justify-content-center mobileonly d-flex">
-            <a href="donation.html" class="btn btn-primary btn-bluebtn rounded-pill py-3 px-sm-5 me-3 animated w-75">Fai una donazione</a>
+    <!-- SERVICES -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width:600px;">
+                <h2 class="darkblue mb-3">Cosa facciamo</h2>
+                <p>Supportiamo i caregiver familiari con servizi concreti, gratuiti e radicati nel territorio di Modena e Maranello.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa fa-hands-helping"></i></div>
+                        <h3>Sostegno Relazionale</h3>
+                        <p>Ascoltiamo i caregiver e li aiutiamo a prendersi cura di sé, con un approccio rispettoso delle diversità culturali e personali.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa fa-map-signs"></i></div>
+                        <h3>Orientamento ai Servizi</h3>
+                        <p>Accompagniamo le famiglie nell'accesso ai servizi sociosanitari del territorio, supportandole nelle pratiche burocratiche.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa fa-graduation-cap"></i></div>
+                        <h3>Formazione</h3>
+                        <p>Organizziamo corsi e percorsi formativi per caregiver e assistenti familiari, per migliorare competenze pratiche e relazionali.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa fa-users"></i></div>
+                        <h3>Gruppi AMA</h3>
+                        <p>Gruppi di Auto Mutuo Aiuto dove i caregiver condividono esperienze e diventano risorsa gli uni per gli altri.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa fa-comments"></i></div>
+                        <h3>Counseling Individuale</h3>
+                        <p>Incontri di sostegno psicologico rivolti a caregiver e assistenti, presso la sede VIC di Gorzano, Maranello.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa fa-balance-scale"></i></div>
+                        <h3>Consulenza Legale</h3>
+                        <p>Orientamento su DAT e Amministrazione di Sostegno (ADS), per dare ai caregiver gli strumenti legali per tutelare i propri cari.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.1s">
+                <a href="about.html" class="btn btn-primary btn-bluebtn rounded-pill py-3 px-5">Approfondisci le attività</a>
+            </div>
         </div>
+    </div>
+    <!-- Services End -->
 
-        <!-- Contact Form Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h2 class="mb-4 darkblue">Lasciaci un messaggio</h2>
-                                
-                                <form id="form" novalidate onsubmit="submitFormEmailJS();">
-                                    <div class="row g-3">
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="name" name="name" placeholder="Nome Cognome" required>
-                                                <label for="name">Nome Cognome</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="email" name="email" placeholder="Email" required>
-                                                <label for="email">Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="object" name="object" placeholder="Oggetto" required>
-                                                <label for="object">Oggetto</label>
-                                            </div>
-                                        </div>                                        
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Il tuo messaggio" id="message" name="message" style="height: 100px" required></textarea>
-                                                <label for="message">Il tuo messaggio</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary btn-bluebtn w-100 py-3" type="submit">Invia</button>
+    <!-- GOALS + PHOTO -->
+    <div class="goals-section py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 about-img wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/foto1.jpg" alt="Attività di Curacari con caregiver familiari">
+                        </div>
+                        <div class="col-6 text-start" style="margin-top: -150px;">
+                            <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/foto2.jpg" alt="Volontari Curacari in attività">
+                        </div>
+                        <div class="col-6 text-end" style="margin-top: -150px;">
+                            <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/resto-del-carlino.webp" alt="Curacari su Il Resto del Carlino">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 class="darkblue mb-4">I nostri obiettivi formativi</h2>
+                    <div class="goal-item">
+                        <div class="goal-dot"></div>
+                        <div><h4>Cura Solidale</h4><p>Promuoviamo una cura basata su ascolto, accoglienza, empatia e inclusione, contribuendo all'umanizzazione delle cure.</p></div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-dot"></div>
+                        <div><h4>Empowerment</h4><p>Formiamo volontari, caregiver e assistenti per promuovere l'autonomia attraverso l'educazione socio-sanitaria.</p></div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-dot"></div>
+                        <div><h4>Capacità e Potenzialità</h4><p>Aumentiamo le capacità dei caregiver per rispondere con più sicurezza alle sfide della non autosufficienza.</p></div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-dot"></div>
+                        <div><h4>Competenze Pratiche</h4><p>Forniamo conoscenze pratiche per organizzare e svolgere attività di cura in modo efficace e sicuro.</p></div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-dot"></div>
+                        <div><h4>Conoscenze Specifiche</h4><p>Offriamo informazioni sulle problematiche fisiche, psicologiche e curative delle persone anziane, fragili o non autosufficienti.</p></div>
+                    </div>
+                    <a href="team.html" class="btn btn-primary btn-bluebtn rounded-pill py-3 px-5 mt-4">Conosci il nostro team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Goals End -->
+
+    <!-- DONATE CTA -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="donate-banner wow fadeInUp" data-wow-delay="0.1s">
+                <h2>Sostieni Curacari</h2>
+                <p>Ogni donazione — anche piccola — permette a Curacari di continuare a offrire formazione gratuita, ascolto e orientamento ai caregiver familiari del territorio.</p>
+                <a href="donation.html" class="btn-donate-white"><i class="fa fa-heart"></i> Fai una donazione</a>
+                <a href="donation.html" class="btn btn-outline-light rounded-pill py-2 px-4 ms-3 mt-2 d-inline-block">Scopri come donare</a>
+            </div>
+        </div>
+    </div>
+    <!-- Donate CTA End -->
+
+    <!-- PRESS MINI STRIP -->
+    <div class="container-xxl wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="press-mini d-flex flex-wrap align-items-center">
+                <span class="me-4 text-muted" style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em;">Parlano di noi</span>
+                <a href="https://www.modenatoday.it/attualita/maranello-inaugurata-la-sede-dei-volontari-in-campo.html" target="_blank" rel="noopener" class="press-mini-item"><strong>Modenatoday</strong></a>
+                <a href="https://www.ilrestodelcarlino.it/modena/cronaca/curacari-una-onlus-per-i-caregiver-lavorera-su-tutto-il-distretto-40021f6c" target="_blank" rel="noopener" class="press-mini-item"><strong>Il Resto del Carlino</strong></a>
+                <a href="https://www.modenatoday.it/attualita/a-maranello-un-percorso-di-formazione-per-gli-assistenti-famigliari.html" target="_blank" rel="noopener" class="press-mini-item"><strong>Modenatoday</strong></a>
+                <a href="https://www.regione.emilia-romagna.it/caregiver/mappe/associazioni-caregiver/associazioni-modena/curacari-aps" target="_blank" rel="noopener" class="press-mini-item"><strong>Regione Emilia-Romagna</strong></a>
+                <a href="testimonianze.html" class="ms-auto btn btn-sm btn-outline-secondary rounded-pill d-none d-md-inline-flex" style="font-size:0.8rem;">Tutti i progetti →</a>
+            </div>
+        </div>
+    </div>
+    <!-- Press Mini End -->
+
+    <!-- CONTACT FORM -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="bg-light rounded">
+                <div class="row g-0">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="h-100 d-flex flex-column justify-content-center p-5">
+                            <h2 class="mb-2 darkblue">Lasciaci un messaggio</h2>
+                            <p class="mb-4" style="color:#74787C;">Hai domande, vuoi sapere come funziona lo sportello o vuoi collaborare con noi? Scrivici.</p>
+                            <form id="form" novalidate onsubmit="submitFormEmailJS();">
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="name" name="name" placeholder="Nome Cognome" required>
+                                            <label for="name">Nome Cognome</label>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control border-0" id="email" name="email" placeholder="Email" required>
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="object" name="object" placeholder="Oggetto" required>
+                                            <label for="object">Oggetto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control border-0" placeholder="Il tuo messaggio" id="message" name="message" style="height: 100px" required></textarea>
+                                            <label for="message">Il tuo messaggio</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary btn-bluebtn w-100 py-3" type="submit">Invia</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="col-lg-6 wow fadeIn mb-2" data-wow-delay="0.5s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-relative w-90 h-90 rounded mx-2 my-4 mb-5" src="img/screenshot.webp" alt="Screenshot app Curacari" style="object-fit: contain; left: 5px;">
-                            </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn mb-2" data-wow-delay="0.5s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="position-relative w-90 h-90 rounded mx-2 my-4 mb-5" src="img/screenshot.webp" alt="Screenshot app Curacari" style="object-fit: contain; left: 5px;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact Form End -->
-
     </div>
+    <!-- Contact Form End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+
 </body>
 <script src="js/partials.js"></script>
 <script src="js/main.js"></script>
-<!-- EMAIL FORM Start -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">emailjs.init('esictJOteI7Yzg0CT')</script>
 <script>
    function submitFormEmailJS(){
     event.preventDefault();
-    const form=document.getElementById('form'); 
+    const form=document.getElementById('form');
     form.checkValidity();
     if(!form.classList.contains("was-validated")) form.classList.add("was-validated");
     if (!form.checkValidity()) return;
@@ -265,13 +436,12 @@
     setTimeout(() => {
         if (form.classList.contains('was-validated')) {
             emailjs.sendForm(serviceID, templateID, form)
-            .then(() => {            
+            .then(() => {
                 alert("Messaggio inviato con successo!");
                 window.location.replace("index.html");
             }, (err) => { alert("Errore nell'invio"); });
         }
     }, 500);
-   }  
+   }
 </script>
-<!-- EMAIL FORM End -->
 </html>
