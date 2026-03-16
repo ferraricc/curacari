@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -12,122 +12,461 @@
     </script>
 
     <meta charset="utf-8">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <title>Fai una donazione – Curacari</title>
-    <meta name="description" content="Sostieni Curacari e aiuta i caregiver familiari. Ogni donazione contribuisce a offrire formazione, supporto e strumenti pratici.">
+    <meta name="description" content="Sostieni Curacari e aiuta i caregiver familiari. Ogni donazione contribuisce a offrire formazione, supporto e strumenti pratici a chi si prende cura di persone fragili.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://curacari.org/donation.html">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="caregiver, supporto, assistenti familiari, promozione sociale, formazione" name="keywords">
+    <meta content="donazione caregiver, 5x1000 caregiver, supporto assistenti familiari, Curacari donazione" name="keywords">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Curacari - Associazione di promozione sociale">
-    <meta property="og:description" content="Supportiamo caregiver familiari e assistenti offrendo formazione, supporto e accompagnamento alla rete dei servizi sociosanitari.">
-    <meta property="og:image" content="img/favicon.png"> <!-- Sostituisci con l'URL dell'immagine -->
-    <meta property="og:url" content="https://curacari.org"> <!-- Sostituisci con l'URL della pagina -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sostieni Curacari – Dona ora">
+    <meta property="og:description" content="Ogni donazione aiuta i caregiver familiari a ricevere formazione, supporto e orientamento. Dona con bonifico o PayPal.">
+    <meta property="og:image" content="https://curacari.org/img/favicon.png">
+    <meta property="og:url" content="https://curacari.org/donation.html">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:title" content="Curacari - Associazione di promozione sociale">
-    <meta name="twitter:description" content="Supportiamo caregiver familiari e assistenti offrendo formazione, supporto e accompagnamento alla rete dei servizi sociosanitari.">
-    <meta name="twitter:image" content="img/favicon.png"> <!-- Sostituisci con l'URL dell'immagine -->
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Sostieni Curacari – Dona ora">
+    <meta name="twitter:description" content="Ogni donazione aiuta i caregiver familiari a ricevere formazione, supporto e orientamento.">
+    <meta name="twitter:image" content="https://curacari.org/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image">
 
-
-    <!-- Google Web Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- Icon Font Stylesheet -->
+
+    <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
+    <!-- Libraries -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Bootstrap + Template -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ── Donation page overrides ── */
+        .donation-hero {
+            background: linear-gradient(135deg, #3d386c 0%, #54b9cd 100%);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .donation-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 320px; height: 320px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+        }
+        .donation-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: -40px;
+            width: 240px; height: 240px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        .donation-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+        .donation-hero .lead { font-size: 1.15rem; opacity: 0.92; max-width: 560px; }
+
+        /* Impact numbers strip */
+        .impact-strip {
+            background: #fff;
+            border-bottom: 1px solid #eef0f2;
+        }
+        .impact-item {
+            padding: 28px 20px;
+            text-align: center;
+            border-right: 1px solid #eef0f2;
+        }
+        .impact-item:last-child { border-right: none; }
+        .impact-num {
+            font-family: 'Lobster Two', cursive;
+            font-size: 2.4rem;
+            color: #3d386c;
+            line-height: 1;
+        }
+        .impact-label { font-size: 0.82rem; color: #74787C; margin-top: 4px; }
+
+        /* Method cards */
+        .method-card {
+            border: 2px solid #eef0f2;
+            border-radius: 20px;
+            padding: 36px 32px;
+            background: #fff;
+            transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+            height: 100%;
+        }
+        .method-card:hover {
+            border-color: #54b9cd;
+            box-shadow: 0 12px 32px rgba(84,185,205,0.15);
+            transform: translateY(-4px);
+        }
+        .method-icon {
+            width: 64px; height: 64px;
+            border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+        }
+        .method-icon.purple { background: #ede9f8; color: #3d386c; }
+        .method-icon.blue   { background: #e3f6fb; color: #54b9cd; }
+        .method-icon.green  { background: #e8f8ee; color: #198754; }
+
+        .method-card h3 {
+            font-size: 1.3rem;
+            color: #3d386c;
+            margin-bottom: 10px;
+        }
+        .method-card p { color: #74787C; font-size: 0.97rem; margin-bottom: 16px; }
+
+        /* IBAN box */
+        .iban-box {
+            background: #f4f3fa;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 12px 0;
+        }
+        .iban-box .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #3d386c;
+            margin-bottom: 4px;
+        }
+        .iban-box .value {
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            letter-spacing: 0.04em;
+            word-break: break-all;
+        }
+        .iban-box .value.normal {
+            font-family: 'Heebo', sans-serif;
+            letter-spacing: 0;
+        }
+
+        /* Copy button */
+        .btn-copy {
+            background: none;
+            border: 1px solid #3d386c;
+            color: #3d386c;
+            border-radius: 8px;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 8px;
+        }
+        .btn-copy:hover { background: #3d386c; color: #fff; }
+        .btn-copy.copied { background: #198754; border-color: #198754; color: #fff; }
+
+        /* 5x1000 badge */
+        .badge-5x { 
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(135deg, #3d386c, #54b9cd);
+            color: #fff;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        /* Why donate section */
+        .why-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+        .why-icon {
+            flex-shrink: 0;
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            background: #e3f6fb;
+            color: #54b9cd;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+        }
+        .why-text h5 { color: #3d386c; font-size: 1rem; margin-bottom: 4px; }
+        .why-text p  { color: #74787C; font-size: 0.9rem; margin: 0; }
+
+        /* PayPal button */
+        .btn-paypal {
+            background: #0070ba;
+            border-color: #0070ba;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: background 0.2s;
+            display: inline-flex; align-items: center; gap: 10px;
+        }
+        .btn-paypal:hover { background: #005ea6; border-color: #005ea6; color: #fff; }
+        .btn-paypal .paypal-logo { font-style: italic; font-weight: 700; }
+
+        /* Quote banner */
+        .quote-banner {
+            background: linear-gradient(135deg, #3d386c 0%, #2a2550 100%);
+            border-radius: 20px;
+            padding: 40px 48px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .quote-banner::before {
+            content: '"';
+            position: absolute;
+            top: -20px; left: 24px;
+            font-size: 10rem;
+            font-family: 'Lobster Two', cursive;
+            opacity: 0.1;
+            line-height: 1;
+        }
+        .quote-banner blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+        .quote-banner cite {
+            display: block;
+            margin-top: 14px;
+            font-style: normal;
+            font-size: 0.9rem;
+            opacity: 0.75;
+        }
+
+        @media (max-width: 767px) {
+            .impact-item { border-right: none; border-bottom: 1px solid #eef0f2; }
+            .impact-item:last-child { border-bottom: none; }
+            .quote-banner { padding: 28px 24px; }
+            .method-card { padding: 28px 24px; }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0" id="maincontainer">
+<div class="container-xxl bg-white p-0" id="maincontainer">
 
-
-
-        <!-- Page Header End -->
-        <div class="container-xxl py-5 page-header position-relative mb-5">
-            <div class="container py-5">
-                <h1 class="display-2 text-white animated slideInDown mb-4">Effettua una donazione</h1>
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>                        
-                        <li class="breadcrumb-item text-white active" aria-current="page">Donazioni</li>
-                    </ol>
-                </nav>
-            </div>
+    <!-- Page Header -->
+    <div class="container-xxl py-5 page-header position-relative mb-5">
+        <div class="container py-5">
+            <h1 class="display-2 text-white animated slideInDown mb-4">Fai una donazione</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Donazioni</li>
+                </ol>
+            </nav>
         </div>
-        <!-- Page Header End -->
+    </div>
+    <!-- Page Header End -->
 
-
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4 darkblue">Dai un contributo anche tu</h1>
-                        <p><strong>Dona tramine bonifico al 5 x 1000</strong><br>Tramite un semplice bonifico puoi sostenere la nostra associazione. Con il tuo 5 x 1000 a Curacari puoi aiutarci a sviluppare i nostri progetti ed aiutare i caregiver</p>
-                        
-                        <p><strong>IBAN: </strong>IT80W0623012906000030488428</p>
-                        <p ><strong>Beneficiario: </strong>CURACARI ASSOCIAZIONE DI PROMOZIONE SOCIALE<br></p>
-                        <hr>
-                        <p><strong>Dona con PayPal</strong></p>
-                        <p>Puoi donare anche tramite PayPal attraverso il link qua sotto</p>
-                        <a target=”_blank” href="https://paypal.me/curacari" class="btn btn-primary btn-bluebtn rounded-pill px-3  d-lg-block">Paga con PayPal<i class="fa fa-arrow-right ms-3"></i></a>
-                         -->
-                    </div>
-                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/inaugurazione-1.jpeg" alt="">
-                            </div>
-                            <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/foto2.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/testimonianza-arletti.jpeg" alt="">
-                            </div>
-                        </div>
-                    </div>
+    <!-- Impact Strip -->
+    <div class="impact-strip wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-6 col-md-3 impact-item">
+                    <div class="impact-num">300+</div>
+                    <div class="impact-label">Caregiver supportati</div>
+                </div>
+                <div class="col-6 col-md-3 impact-item">
+                    <div class="impact-num">30h</div>
+                    <div class="impact-label">Corso di formazione gratuito</div>
+                </div>
+                <div class="col-6 col-md-3 impact-item">
+                    <div class="impact-num">13+</div>
+                    <div class="impact-label">Progetti attivi nel 2025</div>
+                </div>
+                <div class="col-6 col-md-3 impact-item">
+                    <div class="impact-num">100%</div>
+                    <div class="impact-label">Volontari, nessun profitto</div>
                 </div>
             </div>
         </div>
-        <!-- About End -->
-
-
-
-
-
-        
-
-
-
     </div>
+    <!-- Impact Strip End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- Main Donation Section -->
+    <div class="container-xxl py-5">
+        <div class="container">
 
-    <!-- Template Javascript -->
-    
+            <div class="row g-5 align-items-start">
+
+                <!-- LEFT: Why donate + quote -->
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="darkblue mb-2">Perché donare a Curacari?</h2>
+                    <p class="mb-4" style="color:#74787C;">Il tuo contributo permette a Curacari di continuare ad essere al fianco di chi ogni giorno si prende cura di una persona fragile — senza sosta, spesso in silenzio.</p>
+
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa fa-graduation-cap"></i></div>
+                        <div class="why-text">
+                            <h5>Formazione gratuita</h5>
+                            <p>Finanziamo corsi pratici per assistenti familiari e caregiver, accessibili a tutti.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa fa-hands-helping"></i></div>
+                        <div class="why-text">
+                            <h5>Sportello di orientamento</h5>
+                            <p>Aiutiamo le famiglie a navigare i servizi sociosanitari del territorio.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa fa-users"></i></div>
+                        <div class="why-text">
+                            <h5>Gruppi AMA e counseling</h5>
+                            <p>Offriamo spazi di ascolto, sostegno emotivo e confronto tra pari.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa fa-network-wired"></i></div>
+                        <div class="why-text">
+                            <h5>Rete territoriale</h5>
+                            <p>Costruiamo ponti tra famiglie, ospedali, comuni e associazioni del distretto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quote -->
+                    <div class="quote-banner mt-4">
+                        <blockquote>
+                            "Prendersi cura di chi si prende cura è il primo passo verso una comunità più umana."
+                            <cite>— Curacari APS</cite>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Donation methods -->
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 class="darkblue mb-4">Come puoi donare</h2>
+
+                    <div class="row g-4">
+
+                        <!-- 5x1000 -->
+                        <div class="col-12">
+                            <div class="method-card">
+                                <div class="method-icon purple"><i class="fa fa-file-alt"></i></div>
+                                <h3>5×1000 — Costa zero, vale tanto</h3>
+                                <p>Nella tua dichiarazione dei redditi puoi destinare il 5×1000 a Curacari. Non ti costa nulla in più: è una quota delle tue tasse che lo Stato devolve all'associazione che scegli.</p>
+                                <div class="iban-box">
+                                    <div class="label">Codice Fiscale Curacari APS</div>
+                                    <div class="value">94053590361</div>
+                                    <button class="btn-copy" onclick="copyText('94053590361', this)"><i class="fa fa-copy me-1"></i> Copia</button>
+                                </div>
+                                <p class="mt-3 mb-0" style="font-size:0.85rem; color:#74787C;"><i class="fa fa-info-circle me-1"></i> Scrivi il codice fiscale nell'apposito riquadro del 730 o del Modello Unico, scegliendo "Sostegno delle organizzazioni non lucrative".</p>
+                            </div>
+                        </div>
+
+                        <!-- Bonifico -->
+                        <div class="col-md-6">
+                            <div class="method-card">
+                                <div class="method-icon purple"><i class="fa fa-university"></i></div>
+                                <h3>Bonifico bancario</h3>
+                                <p>Dona direttamente sul nostro conto corrente con un bonifico.</p>
+                                <div class="iban-box">
+                                    <div class="label">IBAN</div>
+                                    <div class="value">IT80W0623012906000030488428</div>
+                                    <button class="btn-copy" onclick="copyText('IT80W0623012906000030488428', this)"><i class="fa fa-copy me-1"></i> Copia</button>
+                                </div>
+                                <div class="iban-box mt-2">
+                                    <div class="label">Beneficiario</div>
+                                    <div class="value normal">CURACARI ASSOCIAZIONE DI PROMOZIONE SOCIALE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PayPal -->
+                        <div class="col-md-6">
+                            <div class="method-card d-flex flex-column">
+                                <div class="method-icon blue"><i class="fab fa-paypal"></i></div>
+                                <h3>PayPal</h3>
+                                <p>Dona in pochi click con il tuo account PayPal o con carta di credito, in modo sicuro e immediato.</p>
+                                <div class="mt-auto">
+                                    <a href="https://paypal.me/curacari" target="_blank" rel="noopener" class="btn btn-paypal w-100 justify-content-center">
+                                        <i class="fab fa-paypal"></i>
+                                        <span>Dona con <span class="paypal-logo">PayPal</span></span>
+                                    </a>
+                                    <p class="text-center mt-2 mb-0" style="font-size:0.78rem; color:#74787C;"><i class="fa fa-lock me-1"></i>Pagamento sicuro e protetto</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /row methods -->
+
+                    <!-- Reassurance note -->
+                    <div class="d-flex align-items-start gap-3 mt-4 p-3 rounded" style="background:#f4f3fa;">
+                        <i class="fa fa-heart mt-1" style="color:#3d386c; font-size:1.2rem; flex-shrink:0;"></i>
+                        <p class="mb-0" style="font-size:0.88rem; color:#3d386c;">
+                            <strong>Ogni importo conta.</strong> Curacari è un'associazione di volontariato: ogni euro donato va direttamente a sostenere le attività sul territorio. Puoi donare anche 5€ — fa davvero la differenza.
+                        </p>
+                    </div>
+
+                </div>
+            </div><!-- /row main -->
+
+        </div>
+    </div>
+    <!-- Main Donation Section End -->
+
+    <!-- Photo strip -->
+    <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-4">
+                    <img class="img-fluid rounded-3 w-100" src="img/inaugurazione-1.jpeg" alt="Inaugurazione sede Curacari" style="height:200px; object-fit:cover;">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid rounded-3 w-100" src="img/foto2.jpg" alt="Attività Curacari con caregiver" style="height:200px; object-fit:cover;">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid rounded-3 w-100" src="img/testimonianza-arletti.jpeg" alt="Incontri Curacari" style="height:200px; object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Photo strip End -->
+
+</div><!-- /maincontainer -->
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<script>
+    function copyText(text, btn) {
+        navigator.clipboard.writeText(text).then(() => {
+            btn.innerHTML = '<i class="fa fa-check me-1"></i> Copiato!';
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa fa-copy me-1"></i> Copia';
+                btn.classList.remove('copied');
+            }, 2000);
+        });
+    }
+</script>
+
 </body>
 <script src="js/partials.js"></script>
 <script src="js/main.js"></script>
