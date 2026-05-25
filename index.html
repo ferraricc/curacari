@@ -159,6 +159,27 @@
         .press-mini-item strong { color: #3d386c; }
 
         /* ── MOBILE FIXES ── */
+        /* ── Hero mobile ── */
+        .hero-img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,.30);
+            display: flex;
+            align-items: flex-start;
+            padding-top: 28px;
+        }
+        @media (min-width: 768px) {
+            .hero-img { max-height: 520px; }
+            .hero-overlay { align-items: center; padding-top: 0; }
+        }
+
         @media (max-width: 767px) {
             /* Impact: 2 columns, no side borders */
             .impact-item {
@@ -170,9 +191,6 @@
             .impact-item:nth-last-child(-n+2) { border-bottom: none; }
             .impact-num { font-size: 2rem; }
 
-            /* Hero: smaller text, no overlap with navbar */
-            .header-carousel .position-absolute { padding-top: 20px; }
-
             /* Donate banner */
             .donate-banner { padding: 32px 22px; }
             .donate-banner::before { display: none; }
@@ -181,14 +199,19 @@
             /* Press strip: wrap nicely */
             .press-mini-item { margin-right: 16px; margin-bottom: 6px; }
 
-            /* Service cards: full width on small screens */
+            /* Service cards full width */
             .service-card { padding: 22px 18px; }
+
+            /* Cosa facciamo intro: left-align on mobile */
+            .services-intro { text-align: left !important; }
         }
 
         @media (max-width: 575px) {
-            /* Hero text sizing */
-            .header-carousel h1.display-2 { font-size: 1.8rem !important; }
-            .header-carousel .fs-5 { font-size: 1rem !important; }
+            .hero-img { min-height: 420px; }
+            .hero-overlay { padding-top: 20px; }
+            .header-carousel h1.display-2 { font-size: 1.6rem !important; line-height: 1.2; }
+            .header-carousel .fs-5 { font-size: 0.95rem !important; }
+            .header-carousel .btn { font-size: 0.88rem !important; padding: 10px 18px !important; }
         }
     </style>
 </head>
@@ -199,8 +222,8 @@
     <!-- HERO -->
     <div class="header-carousel position-relative">
         <div class="position-relative">
-            <img class="img-fluid w-100" src="img/inaugurazione-2.jpeg" alt="Inaugurazione sede Curacari - associazione per caregiver familiari a Maranello" style="max-height:520px; object-fit:cover; object-position:center;">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0,0,0,.30);">
+            <img class="hero-img" src="img/inaugurazione-2.jpeg" alt="Inaugurazione sede Curacari - associazione per caregiver familiari a Maranello">
+            <div class="hero-overlay">
                 <div class="container py-4">
                     <div class="row justify-content-start">
                         <div class="col-12 col-lg-7">
@@ -250,7 +273,7 @@
     <!-- SERVICES -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width:640px;">
+            <div class="text-center mx-auto mb-5 wow fadeInUp services-intro" data-wow-delay="0.1s" style="max-width:640px;">
                 <h2 class="darkblue mb-3">Cosa facciamo</h2>
                 <p>Siamo sul territorio del distretto di Sassuolo e Modena e offriamo orientamento, supporto e sostegno ai caregiver familiari e agli assistenti familiari, con formazione, tutoring e counseling individuali. Operiamo presso la Casa della Salute di Sassuolo e la sede VIC – Volontari in Campo di Maranello.</p>
             </div>

@@ -66,7 +66,7 @@ const footer=`
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Curacari.org</a>, All Right Reserved.                      
+                            &copy; <a class="border-bottom" href="#">Curacari.org</a>, All Right Reserved.
                             Developed with &hearts; by Enrico Bergamini
                         </div>
                         <div class="col-md-6 text-center text-md-end">
@@ -80,19 +80,24 @@ const footer=`
             </div>
         </div>      
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    
 `;
 
-const container=document.querySelector("#maincontainer");
-container.innerHTML=header+container.innerHTML;
-container.innerHTML+=footer;
-// SET THE CURRENT PAGE IN THE NAVBAR TO ACTIVE
+// Use insertAdjacentHTML instead of innerHTML reassignment.
+// Rewriting innerHTML destroys and rebuilds the entire DOM, which causes
+// unpredictable rendering bugs on mobile browsers (Safari iOS, Chrome Android)
+// where the browser can read the content mid-rebuild and show corrupt or mixed content.
+// insertAdjacentHTML injects content without touching the existing DOM nodes.
+const container = document.querySelector("#maincontainer");
+container.insertAdjacentHTML('afterbegin', header);
+container.insertAdjacentHTML('beforeend', footer);
+
+// Set the current page link as active in the navbar
 var currentPage = window.location.pathname.split("/").pop();
-setTimeout(()=>{
+setTimeout(function() {
     var links = document.querySelectorAll('.navbar-nav a');
     links.forEach(function(link) {
-        if (link.getAttribute('href') === currentPage) {        
+        if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
         }
     });
-},200);
+}, 200);
