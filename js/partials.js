@@ -30,7 +30,7 @@ const footer=`
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Come puoi contattarci</h3>                        
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+39 353 4618282</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>curacari@gmail.com</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>curacariaps@gmail.com</p>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Via Cappella 99, 41053 Gorzano, Italia</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/curacari?utm_source=webiste"><i class="fab fa-instagram"></i></a>
