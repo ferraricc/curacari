@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-STEQ1QMHS6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,33 +12,29 @@
     </script>
 
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <title>Curacari – Supporto e formazione per caregiver familiari a Modena</title>
     <meta name="description" content="Curacari è un'associazione di promozione sociale che offre formazione, supporto relazionale e orientamento ai servizi per i caregiver familiari nel distretto di Sassuolo e Modena.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://curacari.org/">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="caregiver, supporto, assistenti familiari, promozione sociale, formazione, Modena, Sassuolo, distretto ceramico" name="keywords">
 
     <meta property="og:title" content="Curacari – Supporto e formazione per caregiver familiari">
     <meta property="og:description" content="Supportiamo caregiver familiari e assistenti offrendo formazione, supporto e accompagnamento alla rete dei servizi sociosanitari nel distretto di Sassuolo e Modena.">
-    <meta property="og:image" content="https://curacari.org/img/favicon.png">
+    <meta property="og:image" content="https://curacari.org/img/curacari_logo.png">
     <meta property="og:url" content="https://curacari.org/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
     <meta name="twitter:title" content="Curacari – Supporto e formazione per caregiver familiari">
     <meta name="twitter:description" content="Supportiamo caregiver familiari e assistenti offrendo formazione, supporto e accompagnamento alla rete dei servizi sociosanitari.">
-    <meta name="twitter:image" content="https://curacari.org/img/favicon.png">
+    <meta name="twitter:image" content="https://curacari.org/img/curacari_logo.png">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <script type="application/ld+json">
@@ -56,7 +53,7 @@
         "addressCountry": "IT"
       },
       "telephone": "+393534618282",
-      "email": "curacari@gmail.com",
+      "email": "curacariaps@gmail.com",
       "sameAs": [
         "https://www.instagram.com/curacari",
         "https://www.facebook.com/profile.php?id=61561046382803",
@@ -65,436 +62,185 @@
       ]
     }
     </script>
-
-    <style>
-        /* ── Impact strip ── */
-        .impact-strip { background: #fff; border-bottom: 1px solid #eef0f2; }
-        .impact-item {
-            padding: 28px 16px;
-            text-align: center;
-            border-right: 1px solid #eef0f2;
-        }
-        .impact-item:last-child { border-right: none; }
-        .impact-num {
-            font-family: 'Lobster Two', cursive;
-            font-size: 2.4rem;
-            color: #3d386c;
-            line-height: 1;
-        }
-        .impact-label { font-size: 0.82rem; color: #74787C; margin-top: 4px; }
-
-        /* ── Service cards ── */
-        .service-card {
-            background: #fff;
-            border: 2px solid #eef0f2;
-            border-radius: 20px;
-            padding: 28px 24px;
-            height: 100%;
-            transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
-        }
-        .service-card:hover {
-            border-color: #54b9cd;
-            box-shadow: 0 10px 28px rgba(84,185,205,0.14);
-            transform: translateY(-4px);
-        }
-        .service-icon {
-            width: 52px; height: 52px;
-            border-radius: 14px;
-            background: #e3f6fb;
-            color: #54b9cd;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.3rem;
-            margin-bottom: 16px;
-        }
-        .service-card h3 { font-size: 1.05rem; color: #3d386c; margin-bottom: 8px; }
-        .service-card p  { font-size: 0.92rem; color: #74787C; margin: 0; }
-
-        /* ── Goals ── */
-        .goals-section { background: #FFF5F3; }
-        .goal-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 18px; }
-        .goal-item:last-child { margin-bottom: 0; }
-        .goal-dot { flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%; background: #54b9cd; margin-top: 7px; }
-        .goal-item h4 { font-size: 0.98rem; color: #3d386c; margin-bottom: 3px; }
-        .goal-item p  { font-size: 0.88rem; color: #74787C; margin: 0; }
-
-        /* ── Donate banner ── */
-        .donate-banner {
-            background: linear-gradient(135deg, #3d386c 0%, #54b9cd 100%);
-            border-radius: 24px;
-            padding: 52px 48px;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-        .donate-banner::before {
-            content: '♥';
-            position: absolute;
-            right: 48px; top: 50%;
-            transform: translateY(-50%);
-            font-size: 9rem;
-            opacity: 0.07;
-            line-height: 1;
-            pointer-events: none;
-        }
-        .donate-banner h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 12px; }
-        .donate-banner p  { opacity: 0.9; font-size: 1rem; max-width: 520px; margin-bottom: 24px; }
-        .btn-donate-white {
-            background: #fff; color: #3d386c; border: none;
-            border-radius: 50px; padding: 13px 32px;
-            font-weight: 700; font-size: 0.97rem;
-            transition: background 0.2s, transform 0.2s;
-            display: inline-flex; align-items: center; gap: 8px;
-            text-decoration: none;
-        }
-        .btn-donate-white:hover { background: #FFF5F3; color: #3d386c; transform: scale(1.03); }
-
-        /* ── Press strip ── */
-        .press-mini { border-top: 1px solid #eef0f2; padding: 14px 0; }
-        .press-mini-item {
-            display: inline-flex; align-items: center; gap: 6px;
-            margin-right: 24px; font-size: 0.84rem;
-            color: #74787C; text-decoration: none; transition: color 0.2s;
-        }
-        .press-mini-item:hover { color: #3d386c; }
-        .press-mini-item strong { color: #3d386c; }
-
-        /* ── MOBILE FIXES ── */
-        /* ── Hero mobile ── */
-        .hero-img {
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,.30);
-            display: flex;
-            align-items: flex-start;
-            padding-top: 28px;
-        }
-        @media (min-width: 768px) {
-            .hero-img { max-height: 520px; }
-            .hero-overlay { align-items: center; padding-top: 0; }
-        }
-
-        @media (max-width: 767px) {
-            /* Impact: 2 columns, no side borders */
-            .impact-item {
-                border-right: none;
-                border-bottom: 1px solid #eef0f2;
-                padding: 22px 12px;
-            }
-            .impact-item:nth-child(odd)  { border-right: 1px solid #eef0f2; }
-            .impact-item:nth-last-child(-n+2) { border-bottom: none; }
-            .impact-num { font-size: 2rem; }
-
-            /* Donate banner */
-            .donate-banner { padding: 32px 22px; }
-            .donate-banner::before { display: none; }
-            .btn-donate-white { padding: 12px 24px; font-size: 0.92rem; }
-
-            /* Press strip: wrap nicely */
-            .press-mini-item { margin-right: 16px; margin-bottom: 6px; }
-
-            /* Service cards full width */
-            .service-card { padding: 22px 18px; }
-
-            /* Cosa facciamo intro: left-align on mobile */
-            .services-intro { text-align: left !important; }
-        }
-
-        @media (max-width: 575px) {
-            .hero-img { min-height: 420px; }
-            .hero-overlay { padding-top: 20px; }
-            .header-carousel h1.display-2 { font-size: 1.6rem !important; line-height: 1.2; }
-            .header-carousel .fs-5 { font-size: 0.95rem !important; }
-            .header-carousel .btn { font-size: 0.88rem !important; padding: 10px 18px !important; }
-        }
-    </style>
 </head>
 
 <body>
-<div class="container-xxl bg-white p-0" id="maincontainer">
+<div id="maincontainer">
 
     <!-- HERO -->
-    <div class="header-carousel position-relative">
-        <div class="position-relative">
-            <img class="hero-img" src="img/inaugurazione-2.jpeg" alt="Inaugurazione sede Curacari - associazione per caregiver familiari a Maranello">
-            <div class="hero-overlay">
-                <div class="container py-4">
-                    <div class="row justify-content-start">
-                        <div class="col-12 col-lg-7">
-                            <h1 class="display-2 text-white animated slideInDown mb-3">Insieme ai caregiver, ogni giorno.</h1>
-                            <p class="fs-5 text-white mb-4 animated slideInDown" style="opacity:0.95; max-width:480px;">
-                                Curacari è al tuo fianco con formazione, ascolto e supporto concreto per chi si prende cura di una persona fragile.
-                            </p>
-                            <div class="d-flex flex-wrap gap-3 align-items-center animated slideInLeft">
-                                <a href="testimonianze.html" class="btn btn-primary btn-bluebtn rounded-pill py-2 py-sm-3 px-4 px-sm-5">Scopri i progetti</a>
-                                <a href="contact.html" class="btn btn-outline-light rounded-pill py-2 py-sm-3 px-3 px-sm-4">Contattaci</a>
-                            </div>
-                            <p class="text-white mt-3 mb-0" style="font-size:0.88rem; opacity:0.85;">
-                                <i class="fa fa-phone me-2"></i>Chiama lo sportello: <strong>353 461 8282</strong>
-                            </p>
-                        </div>
+    <section class="section container">
+        <div class="panel panel--purple hero">
+            <div class="panel-circle" style="right:-40px; top:-40px; width:220px; height:220px; background:rgba(84,185,205,0.18);"></div>
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow eyebrow--teal">Associazione di promozione sociale — Modena</span>
+                    <h1 class="hero-title">Insieme ai caregiver, ogni giorno.</h1>
+                    <p class="hero-text">Curacari è al tuo fianco con formazione, ascolto e supporto concreto per chi si prende cura di una persona fragile.</p>
+                    <div class="hero-actions">
+                        <a href="testimonianze.html" class="btn btn--teal">Scopri i progetti</a>
+                        <a href="contact.html" class="btn btn--outline-light">Contattaci</a>
                     </div>
+                    <p class="hero-phone"><i class="fa fa-phone" style="margin-right:8px;"></i>Chiama lo sportello: <strong>353 461 8282</strong></p>
                 </div>
+                <img class="hero-media" src="img/inaugurazione-2.jpeg" alt="Inaugurazione della sede Curacari — associazione per caregiver familiari a Maranello">
             </div>
         </div>
-    </div>
-    <!-- Hero End -->
+    </section>
 
-    <!-- IMPACT STRIP -->
-    <div class="impact-strip wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-6 col-md-3 impact-item">
-                    <div class="impact-num">300+</div>
-                    <div class="impact-label">Caregiver supportati</div>
-                </div>
-                <div class="col-6 col-md-3 impact-item">
-                    <div class="impact-num">13+</div>
-                    <div class="impact-label">Progetti attivi nel 2025</div>
-                </div>
-                <div class="col-6 col-md-3 impact-item">
-                    <div class="impact-num">30h</div>
-                    <div class="impact-label">Corso gratuito realizzato</div>
-                </div>
-                <div class="col-6 col-md-3 impact-item">
-                    <div class="impact-num">100%</div>
-                    <div class="impact-label">Volontari, nessun profitto</div>
-                </div>
-            </div>
+    <!-- IMPACT -->
+    <section class="section--tight container">
+        <div class="impact">
+            <div class="impact-card"><div class="impact-num">300+</div><div class="impact-label">caregiver supportati</div></div>
+            <div class="impact-card"><div class="impact-num">13+</div><div class="impact-label">progetti nel 2025</div></div>
+            <div class="impact-card"><div class="impact-num">30h</div><div class="impact-label">corso gratuito</div></div>
+            <div class="impact-card"><div class="impact-num">100%</div><div class="impact-label">volontari</div></div>
         </div>
-    </div>
+    </section>
 
     <!-- SERVICES -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp services-intro" data-wow-delay="0.1s" style="max-width:640px;">
-                <h2 class="darkblue mb-3">Cosa facciamo</h2>
-                <p>Siamo sul territorio del distretto di Sassuolo e Modena e offriamo orientamento, supporto e sostegno ai caregiver familiari e agli assistenti familiari, con formazione, tutoring e counseling individuali. Operiamo presso la Casa della Salute di Sassuolo e la sede VIC – Volontari in Campo di Maranello.</p>
+    <section class="section container">
+        <div class="section-head">
+            <h2 class="section-title">Cosa facciamo</h2>
+            <p class="section-intro">Siamo sul territorio del distretto di Sassuolo e Modena: orientamento, supporto e formazione per caregiver familiari e assistenti, presso la Casa della Salute di Sassuolo e la sede VIC di Maranello.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card card--hover">
+                <div class="icon-box icon-box--teal"><i class="fa fa-hands-helping"></i></div>
+                <h3>Sostegno Relazionale</h3>
+                <p>Ascoltiamo i caregiver e li aiutiamo a prendersi cura di sé, con un approccio rispettoso delle diversità culturali e personali.</p>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa fa-hands-helping"></i></div>
-                        <h3>Sostegno Relazionale</h3>
-                        <p>Ascoltiamo i caregiver e li aiutiamo a prendersi cura di sé, con un approccio rispettoso delle diversità culturali e personali.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa fa-map-signs"></i></div>
-                        <h3>Orientamento ai Servizi</h3>
-                        <p>Accompagniamo le famiglie nell'accesso ai servizi sociosanitari del territorio, supportandole nelle pratiche burocratiche.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa fa-graduation-cap"></i></div>
-                        <h3>Formazione e Tutoring</h3>
-                        <p>Organizziamo corsi e percorsi formativi per caregiver e assistenti familiari, per migliorare competenze pratiche e relazionali.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa fa-users"></i></div>
-                        <h3>Incontri di Sostegno Emotivo</h3>
-                        <p>Incontri di sostegno emotivo rivolti a caregiver familiari e assistenti, presso la Casa della Salute di Sassuolo e la sede VIC di Maranello.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa fa-comments"></i></div>
-                        <h3>Counseling Individuale</h3>
-                        <p>Incontri individuali di sostegno e counseling per caregiver e assistenti familiari, presso la sede VIC di Gorzano, Maranello e la Casa della Salute di Sassuolo.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa fa-balance-scale"></i></div>
-                        <h3>Consulenza Legale</h3>
-                        <p>Orientamento su DAT (Disposizioni Anticipate di Trattamento) e Amministrazione di Sostegno (ADS), per tutelare i propri cari.</p>
-                    </div>
-                </div>
+            <div class="card card--hover">
+                <div class="icon-box icon-box--teal"><i class="fa fa-map-signs"></i></div>
+                <h3>Orientamento ai Servizi</h3>
+                <p>Accompagniamo le famiglie nell'accesso ai servizi sociosanitari del territorio, supportandole nelle pratiche burocratiche.</p>
             </div>
-            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="about.html" class="btn btn-primary btn-bluebtn rounded-pill py-3 px-5">Approfondisci le attività</a>
+            <div class="card card--hover">
+                <div class="icon-box icon-box--teal"><i class="fa fa-graduation-cap"></i></div>
+                <h3>Formazione e Tutoring</h3>
+                <p>Organizziamo corsi e percorsi formativi per caregiver e assistenti familiari, per migliorare competenze pratiche e relazionali.</p>
+            </div>
+            <div class="card card--hover">
+                <div class="icon-box icon-box--teal"><i class="fa fa-users"></i></div>
+                <h3>Incontri di Sostegno Emotivo</h3>
+                <p>Incontri di sostegno emotivo rivolti a caregiver familiari e assistenti, presso la Casa della Salute di Sassuolo e la sede VIC di Maranello.</p>
+            </div>
+            <div class="card card--hover">
+                <div class="icon-box icon-box--teal"><i class="fa fa-comments"></i></div>
+                <h3>Counseling Individuale</h3>
+                <p>Incontri individuali di sostegno e counseling per caregiver e assistenti familiari, presso la sede VIC di Gorzano, Maranello e la Casa della Salute di Sassuolo.</p>
+            </div>
+            <div class="card card--hover">
+                <div class="icon-box icon-box--teal"><i class="fa fa-balance-scale"></i></div>
+                <h3>Consulenza Legale</h3>
+                <p>Orientamento su DAT (Disposizioni Anticipate di Trattamento) e Amministrazione di Sostegno (ADS), per tutelare i propri cari.</p>
             </div>
         </div>
-    </div>
+        <div class="center-cta">
+            <a href="about.html" class="link-arrow link-arrow--underline">Approfondisci le attività →</a>
+        </div>
+    </section>
 
-    <!-- GOALS + PHOTO -->
-    <div class="goals-section py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 about-img wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/foto1.jpg" alt="Attività di Curacari con caregiver familiari">
-                        </div>
-                        <div class="col-6 text-start" style="margin-top: -150px;">
-                            <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/foto2.jpg" alt="Volontari Curacari in attività">
-                        </div>
-                        <div class="col-6 text-end" style="margin-top: -150px;">
-                            <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/resto-del-carlino.webp" alt="Curacari su Il Resto del Carlino">
-                        </div>
-                    </div>
+    <!-- FEATURED PROJECTS -->
+    <section class="section container">
+        <div class="head-row">
+            <h2 class="section-title">Storie e progetti recenti</h2>
+            <a href="testimonianze.html" class="link-arrow">Vedi tutti i progetti →</a>
+        </div>
+        <div class="grid-3">
+            <a href="testimonianze.html" class="proj-card">
+                <img src="img/inaugurazione-1.jpeg" alt="Caregiver Day 2025 — inaugurazione della nuova sede VIC">
+                <div class="proj-body">
+                    <span class="chip chip--teal">Eventi</span>
+                    <h4 style="margin-top:10px;">Caregiver Day 2025</h4>
+                    <p>L'inaugurazione della nuova sede VIC a Gorzano, Maranello.</p>
                 </div>
-                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.2s">
-                    <h2 class="darkblue mb-4">I nostri obiettivi formativi</h2>
-                    <div class="goal-item">
-                        <div class="goal-dot"></div>
-                        <div>
-                            <h4>Cura Solidale</h4>
-                            <p>Vogliamo contribuire all'umanizzazione e alla gentilezza delle cure, promuovendo ascolto, accoglienza, empatia e inclusione.</p>
-                        </div>
+            </a>
+            <a href="testimonianze.html" class="proj-card">
+                <img src="img/sportello-caregiver.jpg" alt="Sportello Orienta Caregiver">
+                <div class="proj-body">
+                    <span class="chip chip--red">Sportello</span>
+                    <h4 style="margin-top:10px;">Sportello Orienta Caregiver</h4>
+                    <p>Convenzione con AUSL e Unione dei Comuni per l'orientamento ai servizi.</p>
+                </div>
+            </a>
+            <a href="testimonianze.html" class="proj-card">
+                <img src="img/diplomate-formazione-2024.jpg" alt="Formazione continua per assistenti familiari">
+                <div class="proj-body">
+                    <span class="chip chip--green">Formazione</span>
+                    <h4 style="margin-top:10px;">Formazione continua</h4>
+                    <p>Nuove competenze per gli assistenti familiari del distretto.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- GOALS -->
+    <section class="section container">
+        <div class="goals-panel">
+            <div class="split">
+                <div class="goals-media">
+                    <img src="img/foto1.jpg" alt="Attività di Curacari con i caregiver familiari">
+                    <img src="img/foto2.jpg" alt="Volontari Curacari in attività">
+                </div>
+                <div>
+                    <h2 class="section-title" style="margin-bottom:24px;">I nostri obiettivi formativi</h2>
+                    <div class="goals-list">
+                        <div class="goal"><span class="goal-dot"></span><div><h4>Cura Solidale</h4><p>Umanizzazione e gentilezza delle cure, ascolto e inclusione.</p></div></div>
+                        <div class="goal"><span class="goal-dot"></span><div><h4>Empowerment</h4><p>Autonomia attraverso l'educazione socio-sanitaria.</p></div></div>
+                        <div class="goal"><span class="goal-dot"></span><div><h4>Competenze Pratiche</h4><p>Conoscenze per organizzare e svolgere attività di cura in sicurezza.</p></div></div>
                     </div>
-                    <div class="goal-item">
-                        <div class="goal-dot"></div>
-                        <div>
-                            <h4>Empowerment</h4>
-                            <p>Formiamo volontari, caregiver e assistenti per promuovere l'autonomia attraverso l'educazione socio-sanitaria.</p>
-                        </div>
-                    </div>
-                    <div class="goal-item">
-                        <div class="goal-dot"></div>
-                        <div>
-                            <h4>Capacità e Potenzialità</h4>
-                            <p>Aumentiamo le capacità dei caregiver per rispondere con più sicurezza alle sfide della non autosufficienza.</p>
-                        </div>
-                    </div>
-                    <div class="goal-item">
-                        <div class="goal-dot"></div>
-                        <div>
-                            <h4>Competenze Pratiche</h4>
-                            <p>Forniamo conoscenze pratiche per organizzare e svolgere attività di cura in modo efficace e sicuro.</p>
-                        </div>
-                    </div>
-                    <div class="goal-item">
-                        <div class="goal-dot"></div>
-                        <div>
-                            <h4>Conoscenze Specifiche</h4>
-                            <p>Offriamo informazioni sulle problematiche fisiche, emotive, assistenziali e curative delle persone anziane, fragili o non autosufficienti.</p>
-                        </div>
-                    </div>
-                    <a href="team.html" class="btn btn-primary btn-bluebtn rounded-pill py-3 px-5 mt-4">Conosci il nostro team</a>
+                    <a href="team.html" class="btn btn--purple" style="margin-top:24px;">Conosci il nostro team</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- DONATE CTA -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="donate-banner wow fadeInUp" data-wow-delay="0.1s">
-                <h2>Sostieni Curacari</h2>
-                <p>Ogni donazione — anche piccola — permette a Curacari di continuare a offrire formazione gratuita, ascolto e orientamento ai caregiver familiari del territorio.</p>
-                <a href="donation.html" class="btn-donate-white"><i class="fa fa-heart"></i> Fai una donazione</a>
-                <a href="donation.html" class="btn btn-outline-light rounded-pill py-2 px-4 ms-3 mt-2 d-inline-block">Scopri come donare</a>
+    <section class="section container">
+        <div class="donate-cta">
+            <div>
+                <h2>Sostieni Curacari ♥</h2>
+                <p>Ogni donazione — anche piccola — permette a Curacari di continuare a offrire formazione gratuita e ascolto ai caregiver del territorio.</p>
             </div>
+            <a href="donation.html" class="btn btn--white">Fai una donazione</a>
         </div>
-    </div>
+    </section>
 
-    <!-- PRESS MINI STRIP -->
-    <div class="container-xxl wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="press-mini d-flex flex-wrap align-items-center">
-                <span class="me-4 text-muted" style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em;">Parlano di noi</span>
-                <a href="https://www.modenatoday.it/attualita/maranello-inaugurata-la-sede-dei-volontari-in-campo.html" target="_blank" rel="noopener" class="press-mini-item"><strong>Modenatoday</strong></a>
-                <a href="https://www.ilrestodelcarlino.it/modena/cronaca/curacari-una-onlus-per-i-caregiver-lavorera-su-tutto-il-distretto-40021f6c" target="_blank" rel="noopener" class="press-mini-item"><strong>Il Resto del Carlino</strong></a>
-                <a href="https://www.modenatoday.it/attualita/a-maranello-un-percorso-di-formazione-per-gli-assistenti-famigliari.html" target="_blank" rel="noopener" class="press-mini-item"><strong>Modenatoday</strong></a>
-                <a href="https://www.regione.emilia-romagna.it/caregiver/mappe/associazioni-caregiver/associazioni-modena/curacari-aps" target="_blank" rel="noopener" class="press-mini-item"><strong>Regione Emilia-Romagna</strong></a>
-                <a href="testimonianze.html" class="ms-auto btn btn-sm btn-outline-secondary rounded-pill d-none d-md-inline-flex" style="font-size:0.8rem;">Tutti i progetti →</a>
-            </div>
+    <!-- PRESS STRIP -->
+    <section class="section--tight container">
+        <div class="press-strip">
+            <span class="press-label">Parlano di noi</span>
+            <a href="https://www.modenatoday.it/attualita/maranello-inaugurata-la-sede-dei-volontari-in-campo.html" target="_blank" rel="noopener">Modenatoday</a>
+            <a href="https://www.ilrestodelcarlino.it/modena/cronaca/curacari-una-onlus-per-i-caregiver-lavorera-su-tutto-il-distretto-40021f6c" target="_blank" rel="noopener">Il Resto del Carlino</a>
+            <a href="https://www.regione.emilia-romagna.it/caregiver/mappe/associazioni-caregiver/associazioni-modena/curacari-aps" target="_blank" rel="noopener">Regione Emilia-Romagna</a>
         </div>
-    </div>
+    </section>
 
-    <!-- CONTACT FORM -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="bg-light rounded">
-                <div class="row g-0">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="h-100 d-flex flex-column justify-content-center p-4 p-sm-5">
-                            <h2 class="mb-2 darkblue">Lasciaci un messaggio</h2>
-                            <p class="mb-4" style="color:#74787C;">Hai domande, vuoi sapere come funziona lo sportello o vuoi collaborare con noi? Scrivici.</p>
-                            <form id="form" novalidate onsubmit="submitFormEmailJS();">
-                                <div class="row g-3">
-                                    <div class="col-sm-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="name" name="name" placeholder="Nome Cognome" required>
-                                            <label for="name">Nome Cognome</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control border-0" id="email" name="email" placeholder="Email" required>
-                                            <label for="email">Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="object" name="object" placeholder="Oggetto" required>
-                                            <label for="object">Oggetto</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control border-0" placeholder="Il tuo messaggio" id="message" name="message" style="height: 100px" required></textarea>
-                                            <label for="message">Il tuo messaggio</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary btn-bluebtn w-100 py-3" type="submit">Invia</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn mb-2 d-none d-lg-block" data-wow-delay="0.5s" style="min-height: 400px;">
-                        <div class="position-relative h-100">
-                            <img class="position-relative w-90 h-90 rounded mx-2 my-4 mb-5" src="img/screenshot.webp" alt="Screenshot app Curacari" style="object-fit: contain; left: 5px;">
-                        </div>
-                    </div>
+    <!-- CONTACT -->
+    <section class="section container">
+        <div class="form-panel">
+            <form id="form" class="form" novalidate>
+                <h2>Lasciaci un messaggio</h2>
+                <p class="form-lead">Hai domande o vuoi collaborare con noi? Scrivici.</p>
+                <div class="form-row">
+                    <input type="text" id="name" name="name" placeholder="Nome Cognome" aria-label="Nome Cognome" required>
+                    <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required>
                 </div>
-            </div>
+                <div class="field-full">
+                    <input type="text" id="object" name="object" placeholder="Oggetto" aria-label="Oggetto" required>
+                </div>
+                <textarea id="message" name="message" placeholder="Il tuo messaggio" aria-label="Il tuo messaggio" required></textarea>
+                <button type="submit" class="btn btn--purple btn--block">Invia</button>
+            </form>
+            <img src="img/screenshot.webp" alt="Anteprima dell'app Curacari">
         </div>
-    </div>
+    </section>
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-</body>
 <script src="js/partials.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>emailjs.init('esictJOteI7Yzg0CT');</script>
 <script src="js/main.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script type="text/javascript">emailjs.init('esictJOteI7Yzg0CT')</script>
-<script>
-   function submitFormEmailJS(){
-    event.preventDefault();
-    const form=document.getElementById('form');
-    form.checkValidity();
-    if(!form.classList.contains("was-validated")) form.classList.add("was-validated");
-    if (!form.checkValidity()) return;
-    const serviceID = 'service_liczalh';
-    const templateID = 'template_ur7ooxr';
-    setTimeout(() => {
-        if (form.classList.contains('was-validated')) {
-            emailjs.sendForm(serviceID, templateID, form)
-            .then(() => {
-                alert("Messaggio inviato con successo!");
-                window.location.replace("index.html");
-            }, (err) => { alert("Errore nell'invio"); });
-        }
-    }, 500);
-   }
-</script>
+</body>
 </html>

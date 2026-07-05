@@ -1,103 +1,75 @@
-const header=`
-<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>        
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-            <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 text-primary"><img src="img/curacari_logo.png" style="min-height: 25px; max-height: 35px; position: relative; bottom: 5px;" alt="Curacari"></h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="team.html" class="nav-item nav-link">Chi siamo</a>                    
-                    <a href="testimonianze.html" class="nav-item nav-link">Progetti</a>                    
-                    <a href="contact.html" class="nav-item nav-link">Contattaci</a>
-                    <a href="donation.html" class="nav-item nav-link mobileonly">Effettua una donazione</a>
-                </div>
-                <a href="donation.html" class="btn btn-primary btn-redbtn rounded-pill px-3 d-none d-lg-block">Effettua una donazione<i class="fa fa-arrow-right ms-3"></i></a>
-            </div>
-        </nav>
-`;
-const footer=`
-<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5 d-flex justify-content-around">
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Come puoi contattarci</h3>                        
-                        <p class="mb-2">
-                          <i class="fa fa-phone-alt me-3"></i>
-                          <a href="tel:+393534618282" class="text-white-50 text-decoration-none">+39 353 4618282</a>
-                        </p>
-                        <p class="mb-2">
-                          <i class="fa fa-envelope me-3"></i>
-                          <a href="mailto:curacariaps@gmail.com" class="text-white-50 text-decoration-none">curacariaps@gmail.com</a>
-                        </p>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Via Cappella 99, 41053 Gorzano, Italia</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/curacari?utm_source=webiste"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61561046382803"><i class="fab fa-facebook-f"></i></a>                            
-                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/curacariaps"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@CuracariAPS"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Collegamenti rapidi</h3>
-                        <a class="btn btn-link" href="team.html">Chi Siamo</a>
-                        <a class="btn btn-link" href="about.html">Cosa facciamo</a>
-                        <a class="btn btn-link" href="testimonianze.html">Progetti</a>
-                        <a class="btn btn-link" href="donation.html">Donazioni</a>
-                        <a class="btn btn-link" href="contact.html">Contatti</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Riconoscimenti</h3>
-                        <a class="btn btn-link" href="https://www.regione.emilia-romagna.it/caregiver/mappe/associazioni-caregiver/associazioni-modena/curacari-aps" target="_blank" rel="noopener">
-                            <i class="fa fa-award me-2"></i>Regione Emilia-Romagna
-                        </a>
-                        <p class="text-white-50 small mt-2">Curacari APS è riconosciuta dalla Regione Emilia-Romagna come associazione caregiver sul territorio di Modena.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Curacari.org</a>, All Right Reserved.
-                            Developed with &hearts; by Enrico Bergamini
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="contact.html">Contatti</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>      
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+// Shared header + footer, injected once per page so they stay in sync.
+// insertAdjacentHTML is used (not innerHTML =) so existing DOM nodes are never
+// destroyed/rebuilt — this avoids mid-rebuild rendering glitches on mobile Safari/Chrome.
+
+const header = `
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Curacari — home">
+      <img src="img/curacari_logo.png" alt="Curacari">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="team.html">Chi siamo</a>
+      <a href="about.html">Cosa facciamo</a>
+      <a href="testimonianze.html">Progetti</a>
+      <a href="contact.html">Contatti</a>
+      <a href="donation.html" class="nav-cta-mobile">Dona ora ♥</a>
+    </div>
+    <a href="donation.html" class="nav-cta">Dona ora ♥</a>
+  </div>
+</nav>
 `;
 
-// Use insertAdjacentHTML instead of innerHTML reassignment.
-// Rewriting innerHTML destroys and rebuilds the entire DOM, which causes
-// unpredictable rendering bugs on mobile browsers (Safari iOS, Chrome Android)
-// where the browser can read the content mid-rebuild and show corrupt or mixed content.
-// insertAdjacentHTML injects content without touching the existing DOM nodes.
+const footer = `
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div class="col">
+        <h3>Come puoi contattarci</h3>
+        <p><i class="fa fa-phone-alt" style="margin-right:10px;"></i><a href="tel:+393534618282">+39 353 4618282</a></p>
+        <p><i class="fa fa-envelope" style="margin-right:10px;"></i><a href="mailto:curacariaps@gmail.com">curacariaps@gmail.com</a></p>
+        <p><i class="fa fa-map-marker-alt" style="margin-right:10px;"></i>Via Cappella 99, 41053 Gorzano</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/curacari" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61561046382803" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/curacariaps" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/@CuracariAPS" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <h3>Collegamenti rapidi</h3>
+        <p><a href="team.html">Chi Siamo</a></p>
+        <p><a href="about.html">Cosa facciamo</a></p>
+        <p><a href="testimonianze.html">Progetti</a></p>
+        <p><a href="donation.html">Donazioni</a></p>
+        <p><a href="contact.html">Contatti</a></p>
+      </div>
+      <div class="col">
+        <h3>Riconoscimenti</h3>
+        <p class="footer-recog">Curacari APS è riconosciuta dalla <a href="https://www.regione.emilia-romagna.it/caregiver/mappe/associazioni-caregiver/associazioni-modena/curacari-aps" target="_blank" rel="noopener">Regione Emilia-Romagna</a> come associazione caregiver sul territorio di Modena.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Curacari.org — Tutti i diritti riservati.</span>
+      <span class="foot-links"><a href="index.html">Home</a><a href="contact.html">Contatti</a></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Torna su"><i class="fa fa-arrow-up"></i></button>
+`;
+
 const container = document.querySelector("#maincontainer");
-container.insertAdjacentHTML('afterbegin', header);
-container.insertAdjacentHTML('beforeend', footer);
+container.insertAdjacentHTML("afterbegin", header);
+container.insertAdjacentHTML("beforeend", footer);
 
-// Set the current page link as active in the navbar
-var currentPage = window.location.pathname.split("/").pop();
-setTimeout(function() {
-    var links = document.querySelectorAll('.navbar-nav a');
-    links.forEach(function(link) {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-        }
-    });
-}, 200);
+// Highlight the active nav link based on the current file name.
+(function () {
+  var current = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll("#navLinks a").forEach(function (link) {
+    var href = link.getAttribute("href");
+    if (href === current) link.classList.add("active");
+  });
+})();
